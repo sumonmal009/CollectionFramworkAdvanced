@@ -1,0 +1,48 @@
+package com.google.collect.map;
+
+
+
+
+import com.google.common.collect.Range;
+import com.google.common.collect.RangeMap;
+import com.google.common.collect.TreeRangeMap;
+
+
+
+
+public class TreeRangeMapExample {
+	public static void main(String args[]) {
+
+		RangeMap<Integer, String> gradeScale = TreeRangeMap.create();
+
+		gradeScale.put(Range.closed(10, 99), "A");
+		gradeScale.put(Range.closed(25, 99), "B");
+		gradeScale.put(Range.closed(70, 99), "C");
+		gradeScale.put(Range.closed(80, 99), "D");
+		gradeScale.put(Range.closed(90, 99), "E");
+/*
+		gradeScale.put(Range.open(10, 99), "A");
+		gradeScale.put(Range.open(25, 99), "B");
+		gradeScale.put(Range.open(70, 99), "C");
+		gradeScale.put(Range.open(80, 99), "D");
+		gradeScale.put(Range.open(90, 99), "E");
+	*/
+	/*	
+		gradeScale.put(Range.atLeast(10), "A");
+		gradeScale.put(Range.atLeast(25), "B");
+		gradeScale.put(Range.atLeast(70), "C");
+		gradeScale.put(Range.atLeast(80), "D");
+		gradeScale.put(Range.atLeast(90), "E");
+		*/
+		
+		
+		
+		
+		
+		System.out.println(gradeScale.get(71));
+		System.out.println(gradeScale.get(85));
+		System.out.println(gradeScale.get(92));
+		System.out.println(gradeScale);
+	}
+
+}
